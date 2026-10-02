@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CyberShield | IOC Investigation
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/main.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                CS
+            </div>
+
+            <div>
+
+                <strong>
+                    CyberShield
+                </strong>
+
+                <small>
+                    SOC PLATFORM
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="/">
+                <span class="nav-icon">▦</span>
+                Overview
+            </a>
+
+            <a
+                href="/investigation.html"
+                class="active"
+            >
+                <span class="nav-icon">⌕</span>
+                IOC Investigation
+            </a>
+
+            <a href="/vulnerabilities.html">
+                <span class="nav-icon">△</span>
+                Vulnerability Center
+            </a>
+
+            <a href="/awareness.html">
+                <span class="nav-icon">◈</span>
+                Awareness Center
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-label">
+                INVESTIGATION MODE
+            </div>
+
+            <div class="sidebar-status">
+
+                <span class="status-dot"></span>
+
+                LOCAL ANALYSIS
+
+            </div>
+
+            <div class="sidebar-description">
+
+                Indicator validation and
+                local correlation only.
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="eyebrow">
+                    SECURITY INVESTIGATION
+                </div>
+
+                <h1>
+                    IOC Investigation
+                </h1>
+
+                <p>
+                    Validate indicators and correlate
+                    them against local threat intelligence.
+                </p>
+
+            </div>
+
+
+            <a
+                href="/"
+                class="btn secondary"
+            >
+                ← Dashboard
+            </a>
+
+        </header>
+
+
+        <!-- SEARCH -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Indicator Lookup
+                    </h2>
+
+                    <p>
+                        Analyze an IP, domain, URL,
+                        hash, email or CVE.
+                    </p>
+
+                </div>
+
+                <span class="panel-badge">
+                    SAFE MODE
+                </span>
+
+            </div>
+
+
+            <form
+                id="lookup-form"
+                class="search-form"
+            >
+
+                <input
+                    id="indicator"
+                    type="text"
+                    placeholder="Enter indicator..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="btn primary"
+                >
+                    Investigate
+                </button>
+
+            </form>
+
+
+            <div
+                id="validation-result"
+                class="validation-box muted"
+            >
+                Enter an indicator to begin
+                investigation.
+            </div>
+
+
+            <div class="security-note">
+
+                <strong>
+                    Defensive analysis:
+                </strong>
+
+                CyberShield performs syntax validation
+                and local database correlation.
+                It does not perform DNS lookups,
+                port scans, HTTP requests or external
+                probing.
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section
+            id="investigation-results"
+            class="results-section hidden"
+        >
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        ANALYSIS RESULTS
+                    </div>
+
+                    <h2>
+                        Local Correlation
+                    </h2>
+
+                </div>
+
+
+                <span
+                    id="match-count"
+                    class="panel-badge"
+                >
+                    0 matches
+                </span>
+
+            </div>
+
+
+            <div
+                id="matches"
+            ></div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script
+    src="/js/investigation.js"
+></script>
+
+</body>
+
+</html>

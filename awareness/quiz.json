@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Which action is safest when you receive an unexpected password-reset email?",
+        "options": [
+            "Click the link immediately",
+            "Reply with your password",
+            "Verify the request through a trusted channel",
+            "Forward the email to everyone"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What is the main purpose of multi-factor authentication?",
+        "options": [
+            "Make passwords shorter",
+            "Add another verification factor",
+            "Disable account logging",
+            "Remove the need for usernames"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which is a common sign of social engineering?",
+        "options": [
+            "A normal software update",
+            "A request using unusual urgency or pressure",
+            "A scheduled meeting",
+            "A routine system notification"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What should you do if you accidentally interact with a suspicious security email?",
+        "options": [
+            "Hide the incident",
+            "Continue interacting with it",
+            "Report it through the organization's security process",
+            "Delete all security logs"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Why should security incidents be reported quickly?",
+        "options": [
+            "It helps defenders investigate and contain potential impact",
+            "It automatically deletes the incident",
+            "It guarantees there was no compromise",
+            "It prevents all future attacks"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which password practice is generally safer?",
+        "options": [
+            "Reuse one password everywhere",
+            "Share passwords with coworkers",
+            "Use strong unique passwords and a password manager",
+            "Write passwords on a public notice"
+        ],
+        "answer": 2
+    }
+]

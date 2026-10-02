@@ -1,0 +1,54 @@
+SEVERITIES = [
+    "INFORMATIONAL",
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "CRITICAL"
+]
+
+THREAT_STATUSES = [
+    "NEW",
+    "UNDER_REVIEW",
+    "MONITORING",
+    "CLOSED",
+    "FALSE_POSITIVE"
+]
+
+ALERT_STATUSES = [
+    "OPEN",
+    "INVESTIGATING",
+    "RESOLVED",
+    "FALSE_POSITIVE"
+]
+
+INDICATOR_TYPES = [
+    "IP",
+    "DOMAIN",
+    "URL",
+    "MD5",
+    "SHA1",
+    "SHA256",
+    "EMAIL",
+    "CVE"
+]
+
+THREAT_CATEGORIES = [
+    "PHISHING",
+    "MALWARE",
+    "RANSOMWARE",
+    "CREDENTIAL_THREAT",
+    "WEB_THREAT",
+    "NETWORK_THREAT",
+    "VULNERABILITY",
+    "SOCIAL_ENGINEERING",
+    "DATA_EXPOSURE",
+    "ACCOUNT_SECURITY"
+]
+
+RISK_LEVELS = {
+    "INFORMATIONAL": (0, 20),
+    "LOW": (21, 40),
+    "MEDIUM": (41, 60),
+    "HIGH": (61, 80),
+    "CRITICAL": (81, 100)
+}

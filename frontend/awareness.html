@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CyberShield | Awareness Center
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/main.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                CS
+            </div>
+
+            <div>
+
+                <strong>
+                    CyberShield
+                </strong>
+
+                <small>
+                    SOC PLATFORM
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="/">
+                <span class="nav-icon">▦</span>
+                Overview
+            </a>
+
+            <a href="/investigation.html">
+                <span class="nav-icon">⌕</span>
+                IOC Investigation
+            </a>
+
+            <a href="/vulnerabilities.html">
+                <span class="nav-icon">△</span>
+                Vulnerability Center
+            </a>
+
+            <a
+                href="/awareness.html"
+                class="active"
+            >
+                <span class="nav-icon">◈</span>
+                Awareness Center
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-label">
+                HUMAN SECURITY
+            </div>
+
+            <div class="sidebar-status">
+
+                <span class="status-dot"></span>
+
+                TRAINING ACTIVE
+
+            </div>
+
+            <div class="sidebar-description">
+
+                Practical defensive security
+                awareness and knowledge testing.
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="eyebrow">
+                    SECURITY AWARENESS
+                </div>
+
+                <h1>
+                    Awareness Center
+                </h1>
+
+                <p>
+                    Build practical security awareness
+                    through short lessons and quizzes.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- MODULES -->
+
+        <section>
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        LEARNING PATH
+                    </div>
+
+                    <h2>
+                        Security Modules
+                    </h2>
+
+                    <p>
+                        Short defensive security lessons.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="modules"
+                class="module-grid"
+            >
+
+                <div class="loading">
+                    Loading modules...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ -->
+
+        <section class="panel quiz-panel">
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Security Knowledge Check
+                    </h2>
+
+                    <p>
+                        Test your understanding of
+                        common security practices.
+                    </p>
+
+                </div>
+
+
+                <span
+                    id="quiz-progress"
+                    class="panel-badge"
+                >
+                    Loading...
+                </span>
+
+            </div>
+
+
+            <div
+                id="quiz"
+            >
+
+                <div class="loading">
+                    Loading quiz...
+                </div>
+
+            </div>
+
+
+            <button
+                id="submit-quiz"
+                class="btn primary"
+                onclick="submitQuiz()"
+            >
+                Submit Quiz
+            </button>
+
+
+            <div
+                id="quiz-result"
+                class="quiz-result hidden"
+            ></div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script
+    src="/js/awareness.js"
+></script>
+
+</body>
+
+</html>

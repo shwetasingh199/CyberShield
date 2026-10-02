@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CyberShield | Security Operations Center
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/main.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                CS
+            </div>
+
+            <div>
+
+                <strong>
+                    CyberShield
+                </strong>
+
+                <small>
+                    SOC PLATFORM
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a
+                href="/"
+                class="active"
+            >
+                <span class="nav-icon">▦</span>
+                Overview
+            </a>
+
+            <a href="/investigation.html">
+
+                <span class="nav-icon">⌕</span>
+
+                IOC Investigation
+
+            </a>
+
+            <a href="/vulnerabilities.html">
+
+                <span class="nav-icon">△</span>
+
+                Vulnerability Center
+
+            </a>
+
+            <a href="/awareness.html">
+
+                <span class="nav-icon">◈</span>
+
+                Awareness Center
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-label">
+                OPERATIONS
+            </div>
+
+            <div class="sidebar-status">
+
+                <span class="status-dot"></span>
+
+                Defensive Mode
+
+            </div>
+
+            <div class="sidebar-description">
+
+                Local validation,
+                correlation and
+                security analysis.
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-footer">
+
+            <div>
+                CyberShield
+            </div>
+
+            <small>
+                Portfolio Security Platform
+            </small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="eyebrow">
+                    SECURITY OPERATIONS
+                </div>
+
+                <h1>
+                    Security Overview
+                </h1>
+
+                <p>
+                    Monitor threat intelligence,
+                    security alerts and
+                    vulnerability posture.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+                    SYSTEM OPERATIONAL
+
+                </div>
+
+
+                <button
+                    class="btn secondary"
+                    onclick="loadDashboard()"
+                >
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- METRICS -->
+
+        <section class="metric-grid">
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon blue">
+                    TI
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        Total Threats
+                    </span>
+
+                    <strong
+                        id="total-threats"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Tracked intelligence
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon red">
+                    !
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        Active Alerts
+                    </span>
+
+                    <strong
+                        id="active-alerts"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Open investigations
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon orange">
+                    R
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        High Risk
+                    </span>
+
+                    <strong
+                        id="high-risk"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Risk score ≥ 61
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon purple">
+                    CVE
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        Critical CVEs
+                    </span>
+
+                    <strong
+                        id="critical-vulns"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Local vulnerability register
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon cyan">
+                    IR
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        Investigations
+                    </span>
+
+                    <strong
+                        id="investigations"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Analyst workflow
+                    </small>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- MAIN DASHBOARD GRID -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- THREAT SEVERITY -->
+
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Threat Activity
+                        </h2>
+
+                        <p>
+                            Current intelligence by severity.
+                        </p>
+
+                    </div>
+
+                    <span class="panel-badge">
+                        LIVE DATA
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="severity-bars"
+                    class="severity-bars"
+                >
+
+                    <div class="loading">
+                        Loading...
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CATEGORIES -->
+
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Threat Categories
+                        </h2>
+
+                        <p>
+                            Intelligence distribution.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="category-list"
+                    class="category-list"
+                >
+
+                    <div class="loading">
+                        Loading...
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- THREAT TABLE -->
+
+            <article class="panel panel-wide">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Recent Threat Intelligence
+                        </h2>
+
+                        <p>
+                            Latest records prioritized by
+                            the security workflow.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="/investigation.html"
+                        class="text-link"
+                    >
+                        Investigate →
+                    </a>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Threat
+                                </th>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Severity
+                                </th>
+
+                                <th>
+                                    Risk
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="threat-table"
+                        >
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </article>
+
+
+            <!-- ALERT QUEUE -->
+
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Alert Queue
+                        </h2>
+
+                        <p>
+                            Security events requiring
+                            analyst attention.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="alert-list"
+                    class="alert-list"
+                >
+
+                    <div class="loading">
+                        Loading...
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="quick-actions">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        SECURITY WORKFLOWS
+                    </div>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <a
+                    href="/investigation.html"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon">
+                        ⌕
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Investigate IOC
+                        </strong>
+
+                        <p>
+                            Validate and correlate
+                            an indicator.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/vulnerabilities.html"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon">
+                        △
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Review Vulnerabilities
+                        </strong>
+
+                        <p>
+                            Assess CVEs and
+                            remediation status.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/awareness.html"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon">
+                        ◈
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Security Awareness
+                        </strong>
+
+                        <p>
+                            Learn and test
+                            security knowledge.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <div
+            id="toast"
+            class="toast"
+        ></div>
+
+
+    </main>
+
+</div>
+
+
+<script
+    src="/js/dashboard.js"
+></script>
+
+</body>
+
+</html>

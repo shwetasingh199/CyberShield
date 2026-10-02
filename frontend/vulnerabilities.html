@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CyberShield | Vulnerability Center
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/main.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                CS
+            </div>
+
+            <div>
+
+                <strong>
+                    CyberShield
+                </strong>
+
+                <small>
+                    SOC PLATFORM
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="/">
+                <span class="nav-icon">▦</span>
+                Overview
+            </a>
+
+            <a href="/investigation.html">
+                <span class="nav-icon">⌕</span>
+                IOC Investigation
+            </a>
+
+            <a
+                href="/vulnerabilities.html"
+                class="active"
+            >
+                <span class="nav-icon">△</span>
+                Vulnerability Center
+            </a>
+
+            <a href="/awareness.html">
+                <span class="nav-icon">◈</span>
+                Awareness Center
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-section">
+
+            <div class="sidebar-label">
+                EXPOSURE MANAGEMENT
+            </div>
+
+            <div class="sidebar-status">
+
+                <span class="status-dot"></span>
+
+                LOCAL REGISTER
+
+            </div>
+
+            <div class="sidebar-description">
+
+                Track vulnerability findings,
+                exposure and remediation.
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="eyebrow">
+                    EXPOSURE MANAGEMENT
+                </div>
+
+                <h1>
+                    Vulnerability Center
+                </h1>
+
+                <p>
+                    Review vulnerabilities,
+                    exposure and remediation status.
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn secondary"
+                onclick="loadVulnerabilities()"
+            >
+                ↻ Refresh
+            </button>
+
+        </header>
+
+
+        <!-- METRICS -->
+
+        <section class="metric-grid">
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon blue">
+                    V
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        Total Findings
+                    </span>
+
+                    <strong
+                        id="v-total"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Registered vulnerabilities
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon orange">
+                    O
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        Open
+                    </span>
+
+                    <strong
+                        id="v-open"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Requiring attention
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon red">
+                    C
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        Critical
+                    </span>
+
+                    <strong
+                        id="v-critical"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Highest severity
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <div class="metric-icon purple">
+                    !
+                </div>
+
+                <div>
+
+                    <span class="metric-label">
+                        Evidence Flagged
+                    </span>
+
+                    <strong
+                        id="v-evidence"
+                        class="metric-value"
+                    >
+                        --
+                    </strong>
+
+                    <small>
+                        Local exploitation evidence
+                    </small>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- TABLE -->
+
+        <section class="panel">
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Vulnerability Register
+                    </h2>
+
+                    <p>
+                        Filter the local vulnerability
+                        assessment.
+                    </p>
+
+                </div>
+
+
+                <div class="filters">
+
+                    <select
+                        id="severity-filter"
+                    >
+
+                        <option value="">
+                            All severities
+                        </option>
+
+                        <option value="CRITICAL">
+                            Critical
+                        </option>
+
+                        <option value="HIGH">
+                            High
+                        </option>
+
+                        <option value="MEDIUM">
+                            Medium
+                        </option>
+
+                        <option value="LOW">
+                            Low
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="status-filter"
+                    >
+
+                        <option value="">
+                            All statuses
+                        </option>
+
+                        <option value="OPEN">
+                            Open
+                        </option>
+
+                        <option value="IN_REVIEW">
+                            In Review
+                        </option>
+
+                        <option value="RESOLVED">
+                            Resolved
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                CVE
+                            </th>
+
+                            <th>
+                                Finding
+                            </th>
+
+                            <th>
+                                Severity
+                            </th>
+
+                            <th>
+                                CVSS
+                            </th>
+
+                            <th>
+                                Asset Criticality
+                            </th>
+
+                            <th>
+                                Exposure
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Remediation
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="vuln-table"
+                    >
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script
+    src="/js/vulnerabilities.js"
+></script>
+
+</body>
+
+</html>

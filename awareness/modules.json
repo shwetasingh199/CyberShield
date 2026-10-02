@@ -1,0 +1,287 @@
+[
+  {
+    "id": 1,
+    "title": "Phishing Awareness",
+    "category": "Phishing",
+    "what_is_it": "Phishing is a social engineering technique that attempts to trick people into revealing information or taking an unsafe action.",
+    "why_it_matters": "Phishing can lead to credential theft, fraud, malware exposure, or unauthorized account access.",
+    "warning_signs": [
+      "Unexpected sender",
+      "Urgent request",
+      "Credential request",
+      "Unexpected attachment",
+      "Suspicious link",
+      "Payment request",
+      "Impersonation",
+      "Unexpected QR code"
+    ],
+    "safe_practices": [
+      "Verify unexpected requests using a trusted channel.",
+      "Do not disclose passwords or MFA codes.",
+      "Inspect unexpected messages carefully.",
+      "Report suspicious messages through your organization's process."
+    ],
+    "if_something_happens": "Stop interacting with the message and report it through the approved security or IT channel."
+  },
+  {
+    "id": 2,
+    "title": "Password Security",
+    "category": "Passwords",
+    "what_is_it": "Password security involves creating and protecting strong, unique authentication secrets.",
+    "why_it_matters": "Password reuse can allow one compromised password to affect multiple accounts.",
+    "warning_signs": [
+      "Using the same password everywhere",
+      "Short passwords",
+      "Sharing passwords",
+      "Saving passwords in unsafe locations"
+    ],
+    "safe_practices": [
+      "Use unique passwords.",
+      "Prefer long passphrases.",
+      "Use a reputable password manager.",
+      "Never share passwords."
+    ],
+    "if_something_happens": "Change the affected credential through the official account recovery process and report suspected compromise."
+  },
+  {
+    "id": 3,
+    "title": "MFA and Passkeys",
+    "category": "MFA",
+    "what_is_it": "Multi-factor authentication adds another authentication factor beyond a password. Passkeys use modern cryptographic authentication.",
+    "why_it_matters": "Additional authentication factors can reduce the impact of stolen passwords.",
+    "warning_signs": [
+      "Unexpected MFA prompts",
+      "Requests to approve unknown login attempts",
+      "Unexpected authentication notifications"
+    ],
+    "safe_practices": [
+      "Use MFA wherever supported.",
+      "Prefer phishing-resistant authentication where available.",
+      "Never approve an unexpected authentication request."
+    ],
+    "if_something_happens": "Deny unexpected authentication requests and report the event."
+  },
+  {
+    "id": 4,
+    "title": "Social Engineering",
+    "category": "Social Engineering",
+    "what_is_it": "Social engineering manipulates people into taking actions that may weaken security.",
+    "why_it_matters": "Attackers may exploit trust, urgency, authority, or fear.",
+    "warning_signs": [
+      "Unusual urgency",
+      "Authority pressure",
+      "Secrecy requests",
+      "Unexpected requests for sensitive information"
+    ],
+    "safe_practices": [
+      "Pause before acting.",
+      "Verify unusual requests independently.",
+      "Follow organizational procedures."
+    ],
+    "if_something_happens": "Stop the interaction and report it through an approved channel."
+  },
+  {
+    "id": 5,
+    "title": "Safe Browsing",
+    "category": "Safe Browsing",
+    "what_is_it": "Safe browsing means using websites and online services carefully and verifying unexpected requests.",
+    "why_it_matters": "Unsafe browsing can expose users to scams, credential theft, or unwanted software.",
+    "warning_signs": [
+      "Unexpected login pages",
+      "Suspicious redirects",
+      "Unusual download prompts",
+      "Urgent security warnings"
+    ],
+    "safe_practices": [
+      "Use bookmarks for important services.",
+      "Keep browsers updated.",
+      "Do not bypass security warnings without understanding them."
+    ],
+    "if_something_happens": "Close the page and report suspicious activity if organizational systems are involved."
+  },
+  {
+    "id": 6,
+    "title": "Secure Wi-Fi",
+    "category": "Wi-Fi",
+    "what_is_it": "Secure Wi-Fi uses appropriate authentication and encryption and avoids unnecessary exposure.",
+    "why_it_matters": "Poorly secured networks can expose communications and devices to additional risk.",
+    "warning_signs": [
+      "Unknown networks",
+      "Unsecured public Wi-Fi",
+      "Unexpected network names"
+    ],
+    "safe_practices": [
+      "Use trusted networks.",
+      "Use organizational VPN controls when required.",
+      "Avoid sensitive activity on unknown networks."
+    ],
+    "if_something_happens": "Disconnect from suspicious networks and inform IT when appropriate."
+  },
+  {
+    "id": 7,
+    "title": "Software Updates",
+    "category": "Software Updates",
+    "what_is_it": "Software updates fix defects and may address security vulnerabilities.",
+    "why_it_matters": "Delayed patching can leave known weaknesses exposed.",
+    "warning_signs": [
+      "Repeated update reminders",
+      "Unsupported software",
+      "Applications that are no longer receiving updates"
+    ],
+    "safe_practices": [
+      "Install approved updates promptly.",
+      "Use supported software.",
+      "Follow organizational patching procedures."
+    ],
+    "if_something_happens": "Report failed or suspicious update behavior to IT."
+  },
+  {
+    "id": 8,
+    "title": "Ransomware Awareness",
+    "category": "Ransomware",
+    "what_is_it": "Ransomware is malicious activity that can disrupt access to systems or data, sometimes combined with data theft or extortion.",
+    "why_it_matters": "Ransomware can cause operational downtime and data-access problems.",
+    "warning_signs": [
+      "Unexpected file changes",
+      "Unavailable files",
+      "Unusual security alerts",
+      "Unexpected system behavior"
+    ],
+    "safe_practices": [
+      "Maintain backups.",
+      "Use least privilege.",
+      "Keep systems patched.",
+      "Use endpoint and email security.",
+      "Prepare incident response procedures."
+    ],
+    "if_something_happens": "Report suspected ransomware immediately and follow the organization's incident-response procedure."
+  },
+  {
+    "id": 9,
+    "title": "USB and Removable Media",
+    "category": "Removable Media",
+    "what_is_it": "Removable media includes USB drives and external storage devices.",
+    "why_it_matters": "Unknown devices can introduce security and data-loss risks.",
+    "warning_signs": [
+      "Unknown USB devices",
+      "Unexpected files",
+      "Untrusted removable media"
+    ],
+    "safe_practices": [
+      "Use organization-approved devices.",
+      "Do not connect unknown media.",
+      "Follow removable-media policies."
+    ],
+    "if_something_happens": "Disconnect only if safe and report the event to IT/security."
+  },
+  {
+    "id": 10,
+    "title": "Data Privacy",
+    "category": "Privacy",
+    "what_is_it": "Data privacy involves protecting personal, confidential, and sensitive information.",
+    "why_it_matters": "Unnecessary disclosure can cause privacy, legal, and business risks.",
+    "warning_signs": [
+      "Unexpected data requests",
+      "Unprotected sensitive files",
+      "Sharing data with unauthorized recipients"
+    ],
+    "safe_practices": [
+      "Share only necessary information.",
+      "Use approved storage systems.",
+      "Check recipients before sending sensitive data."
+    ],
+    "if_something_happens": "Report accidental disclosure promptly."
+  },
+  {
+    "id": 11,
+    "title": "Mobile Security",
+    "category": "Mobile Security",
+    "what_is_it": "Mobile security protects smartphones and tablets from unauthorized access and unsafe applications.",
+    "why_it_matters": "Mobile devices can contain credentials, communications, and sensitive data.",
+    "warning_signs": [
+      "Unknown applications",
+      "Unexpected authentication requests",
+      "Lost devices"
+    ],
+    "safe_practices": [
+      "Use screen locks.",
+      "Install applications from trusted sources.",
+      "Keep mobile software updated."
+    ],
+    "if_something_happens": "Report lost devices or suspected compromise through the approved process."
+  },
+  {
+    "id": 12,
+    "title": "Remote Work Security",
+    "category": "Remote Work",
+    "what_is_it": "Remote work security protects systems and information while working outside normal organizational locations.",
+    "why_it_matters": "Remote environments may involve unfamiliar networks and physical surroundings.",
+    "warning_signs": [
+      "Unknown networks",
+      "Unattended devices",
+      "Sensitive conversations in public locations"
+    ],
+    "safe_practices": [
+      "Lock devices when unattended.",
+      "Use approved remote-access tools.",
+      "Protect sensitive information from unauthorized viewers."
+    ],
+    "if_something_happens": "Report lost devices or suspected unauthorized access."
+  },
+  {
+    "id": 13,
+    "title": "Cloud Account Security",
+    "category": "Cloud Security",
+    "what_is_it": "Cloud account security protects identities, data, and access to cloud services.",
+    "why_it_matters": "Compromised cloud accounts can expose large amounts of information.",
+    "warning_signs": [
+      "Unexpected login alerts",
+      "Unknown sessions",
+      "Unexpected sharing changes"
+    ],
+    "safe_practices": [
+      "Use MFA.",
+      "Review account activity.",
+      "Limit unnecessary permissions."
+    ],
+    "if_something_happens": "Report unexpected cloud account activity immediately."
+  },
+  {
+    "id": 14,
+    "title": "Incident Reporting",
+    "category": "Incident Reporting",
+    "what_is_it": "Incident reporting means notifying the appropriate security or IT team about suspected security events.",
+    "why_it_matters": "Early reporting can help defenders investigate and contain problems.",
+    "warning_signs": [
+      "Unexpected authentication",
+      "Suspicious messages",
+      "Lost devices",
+      "Unusual system behavior"
+    ],
+    "safe_practices": [
+      "Know your reporting channel.",
+      "Report quickly.",
+      "Provide factual information."
+    ],
+    "if_something_happens": "Use the organization's approved security reporting mechanism."
+  },
+  {
+    "id": 15,
+    "title": "AI-Enabled Scam Awareness",
+    "category": "AI Scam Awareness",
+    "what_is_it": "AI-enabled scams may use generated text, images, audio, or video to make deceptive communications appear convincing.",
+    "why_it_matters": "Highly convincing content can make traditional visual clues less reliable.",
+    "warning_signs": [
+      "Unexpected urgent requests",
+      "Requests to bypass normal procedures",
+      "Unusual payment instructions",
+      "Requests involving secrecy"
+    ],
+    "safe_practices": [
+      "Verify unusual requests independently.",
+      "Use trusted contact channels.",
+      "Follow normal approval procedures."
+    ],
+    "if_something_happens": "Stop and verify through a trusted channel."
+  }
+]
