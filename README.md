@@ -80,11 +80,17 @@ Security explanation
 
 ## Screenshots
 <img width="1892" height="893" alt="P1 O s1" src="https://github.com/user-attachments/assets/b2e5b10a-5e6b-4f8b-888b-b96317eb4da0" />
+
 <img width="1881" height="876" alt="P1 O s2" src="https://github.com/user-attachments/assets/20c694a1-5541-47d9-aaac-6405dbd45315" />
+
 <img width="1872" height="887" alt="P1 O s3" src="https://github.com/user-attachments/assets/46f5a404-95a7-47cc-ae71-82660bc4b96c" />
+
 <img width="1892" height="882" alt="P1 O s4" src="https://github.com/user-attachments/assets/c1486f60-c1f6-4ad7-94ec-4a4401bc2828" />
+
 <img width="1908" height="825" alt="P1 O s5" src="https://github.com/user-attachments/assets/50e0d475-dd94-40de-b5de-1e6a3a96dc96" />
+
 <img width="1852" height="878" alt="P1 O s6" src="https://github.com/user-attachments/assets/f7c7a2f9-a38f-4471-aab3-e36c84cc82d7" />
+
 <img width="1866" height="862" alt="P1 O s7" src="https://github.com/user-attachments/assets/7cf4b440-5df9-4ce6-a6f3-4f64d17dc1ae" />
 
 ## 🔍 Threat Intelligence
