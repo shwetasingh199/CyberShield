@@ -693,43 +693,6 @@ CyberShield provides information and security context to an analyst rather than 
 
 ---
 
-## 🔄 SOC Workflow
-
-The core CyberShield workflow is:
-
-┌──────────────┐
-│    Collect   │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│   Validate   │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│   Enrich     │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│  Correlate   │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│ Assess Risk  │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│ Generate     │
-│ Alerts       │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│ Investigate  │
-└──────┬───────┘
-       ↓
-┌──────────────┐
-│   Explain    │
-└──────────────┘
-
 ## 🎯 Project Goals
 
 CyberShield was developed to demonstrate practical understanding of:
