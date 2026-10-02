@@ -76,6 +76,8 @@ Alert generation
        ↓
 Security explanation
 
+---
+
 ## 🚀 Key Features
 
 ## Screenshots
@@ -110,6 +112,8 @@ CVE identifiers
 
 Each indicator is validated before being stored or investigated.
 
+---
+
 ## 🧪 Indicator Validation
 
 The platform performs local syntax validation and normalization.
@@ -136,6 +140,8 @@ Example response:
 
 CyberShield intentionally avoids automatically contacting submitted domains or IP addresses.
 
+---
+
 ## 🕵️ IOC Investigation
 
 The IOC Investigation module provides a controlled investigation workflow.
@@ -152,23 +158,9 @@ Display threat category.
 Display investigation status.
 Provide relevant MITRE ATT&CK context where available.
 
-Example workflow:
-
-IOC
- │
- ├── Validate
- │
- ├── Normalize
- │
- ├── Local Database Search
- │
- ├── Threat Correlation
- │
- ├── Risk Assessment
- │
- └── ATT&CK Context
-
 No external network request is required for local IOC investigation.
+
+---
 
 ## ⚠️ Risk Assessment
 
@@ -199,6 +191,8 @@ Score	Classification
 
 This allows threat records to be prioritized using a consistent scoring model.
 
+---
+
 ## 🚨 Alert Management
 
 CyberShield can automatically generate alerts when a threat reaches a high-risk threshold.
@@ -221,6 +215,8 @@ RESOLVED
 FALSE_POSITIVE
 
 The system also prevents duplicate active alerts for the same threat.
+
+---
 
 ## 🛡️ Vulnerability Management
 
@@ -303,6 +299,8 @@ Incident Reporting
 
 Teaches users how to report suspicious security activity through an organization's security process.
 
+---
+
 ## 🧠 Security Awareness Quiz
 
 The platform includes an interactive security quiz.
@@ -319,7 +317,7 @@ Score Calculation
    ↓
 Percentage
    ↓
-Security Recommendation
+Security Recommendation 
 
 Example result:
 
@@ -330,6 +328,8 @@ Strong security awareness.
 Continue practicing with advanced scenarios.
 
 Quiz results are stored locally for future analysis.
+
+---
 
 ## 📊 Security Dashboard
 
@@ -379,55 +379,7 @@ Alert Queue
 
 Security alerts are presented separately so that analysts can quickly identify records requiring investigation.
 
-## 🏗️ Platform Architecture
-
-CyberShield follows a layered architecture.
-
-┌───────────────────────────────────────────┐
-│              Web Frontend                 │
-│                                           │
-│ Dashboard │ Investigation │ Awareness     │
-│ Vulnerabilities                           │
-└─────────────────────┬─────────────────────┘
-                      │
-                      │ HTTP / JSON
-                      ▼
-┌───────────────────────────────────────────┐
-│              Flask REST API               │
-│                                           │
-│ Threat Routes                             │
-│ Indicator Routes                          │
-│ Investigation Routes                      │
-│ Alert Routes                              │
-│ Vulnerability Routes                      │
-│ Awareness Routes                          │
-│ Dashboard Routes                           │
-└─────────────────────┬─────────────────────┘
-                      │
-                      ▼
-┌───────────────────────────────────────────┐
-│             Security Services             │
-│                                           │
-│ Indicator Validation                      │
-│ Threat Management                         │
-│ Risk Assessment                           │
-│ Correlation                               │
-│ Alert Generation                          │
-│ Vulnerability Management                  │
-│ Awareness Management                      │
-└─────────────────────┬─────────────────────┘
-                      │
-                      ▼
-┌───────────────────────────────────────────┐
-│                SQLite                     │
-│                                           │
-│ Threats                                   │
-│ Indicators                               │
-│ Alerts                                   │
-│ Vulnerabilities                           │
-│ Awareness Modules                         │
-│ Quiz Results                              │
-└───────────────────────────────────────────┘
+---
 
 ## 🧰 Technology Stack
 Backend
@@ -447,91 +399,7 @@ Git
 GitHub
 Python Virtual Environment
 
-## 📁 Project Structure
-CyberShield/
-│
-├── backend/
-│   ├── __init__.py
-│   ├── app.py
-│   ├── config.py
-│   │
-│   ├── api/
-│   │   ├── __init__.py
-│   │   ├── threat_routes.py
-│   │   ├── indicator_routes.py
-│   │   ├── alert_routes.py
-│   │   ├── vulnerability_routes.py
-│   │   ├── awareness_routes.py
-│   │   └── dashboard_routes.py
-│   │
-│   ├── core/
-│   │   ├── __init__.py
-│   │   ├── database.py
-│   │   ├── security.py
-│   │   └── constants.py
-│   │
-│   ├── services/
-│   │   ├── __init__.py
-│   │   ├── indicator_service.py
-│   │   ├── threat_service.py
-│   │   ├── enrichment_service.py
-│   │   ├── risk_service.py
-│   │   ├── correlation_service.py
-│   │   ├── alert_service.py
-│   │   ├── attack_service.py
-│   │   ├── vulnerability_service.py
-│   │   └── awareness_service.py
-│   │
-│   └── utils/
-│       ├── __init__.py
-│       └── validators.py
-│
-├── frontend/
-│   ├── index.html
-│   ├── investigation.html
-│   ├── awareness.html
-│   ├── vulnerabilities.html
-│   │
-│   ├── css/
-│   │   ├── main.css
-│   │   ├── dashboard.css
-│   │   └── investigation.css
-│   │
-│   └── js/
-│       ├── api.js
-│       ├── dashboard.js
-│       ├── investigation.js
-│       ├── awareness.js
-│       └── vulnerabilities.js
-│
-├── data/
-│   ├── cyber_shield.db
-│   ├── seed_threats.py
-│   ├── seed_vulnerabilities.py
-│   └── seed_awareness.py
-│
-├── awareness/
-│   ├── modules.json
-│   └── quiz.json
-│
-├── tests/
-│   ├── test_indicators.py
-│   ├── test_risk.py
-│   ├── test_threats.py
-│   ├── test_alerts.py
-│   └── test_api.py
-│
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── SOC_WORKFLOW.md
-│   ├── THREAT_MODEL.md
-│   ├── API.md
-│   └── PROJECT_GUIDE.md
-│
-├── .env.example
-├── .gitignore
-├── requirements.txt
-└── README.md
+---
 
 ## 🔌 API Overview
 
@@ -600,6 +468,8 @@ Example:
     "total": 6
 }
 
+---
+
 ## 💻 Installation
 1. Clone the Repository
 git clone https://github.com/YOUR_USERNAME/CyberShield.git
@@ -616,6 +486,8 @@ python3 -m venv .venv
 source .venv/bin/activate
 3. Install Dependencies
 pip install -r requirements.txt
+
+---
 
 ## ⚙️ Configuration
 
@@ -640,6 +512,8 @@ The repository should contain:
 
 instead of your real .env.
 
+---
+
 ## 🗄️ Database Initialization
 
 CyberShield uses SQLite for local development.
@@ -656,6 +530,8 @@ vulnerabilities
 awareness_modules
 quiz_results
 
+---
+
 ## 🌱 Database Seeding
 
 CyberShield includes seed scripts for demonstration and development.
@@ -668,6 +544,8 @@ Awareness Modules
 python data\seed_awareness.py
 
 These scripts create local demonstration records so the dashboard can be evaluated without requiring external threat-intelligence services.
+
+---
 
 ## ▶️ Running the Application
 
@@ -682,6 +560,8 @@ http://127.0.0.1:5000
 Open the dashboard in a browser:
 
 http://127.0.0.1:5000/
+
+---
 
 ## 🖥️ Application Pages
 Dashboard
@@ -723,6 +603,8 @@ Cybersecurity education
 Interactive quizzes
 Security knowledge assessment
 
+---
+
 ## 🧪 Testing
 
 Run the test suite with:
@@ -736,6 +618,8 @@ Risk calculation
 Threat creation
 Alert generation
 API behavior
+
+---
 
 ## 🔐 Security & Defensive Scope
 
@@ -769,6 +653,8 @@ Vulnerability Management
 Security Awareness
 
 This makes the project suitable for educational environments, defensive security portfolios, and controlled demonstrations.
+
+---
 
 ## 🧩 Design Philosophy
 
@@ -804,6 +690,8 @@ This improves maintainability and makes the architecture easier to extend.
 5. Human-in-the-Loop Security
 
 CyberShield provides information and security context to an analyst rather than attempting to automatically make irreversible security decisions.
+
+---
 
 ## 🔄 SOC Workflow
 
@@ -863,6 +751,8 @@ Secure software practices
 Defensive SOC workflows
 
 The project is intended to demonstrate how multiple cybersecurity concepts can be integrated into one practical application.
+
+---
 
 ## 🔮 Future Enhancements
 
@@ -943,6 +833,8 @@ Analyst Investigation
 
 The implementation would remain focused on defensive monitoring rather than offensive capabilities.
 
+---
+
 ## 📈 Example SOC Scenario
 
 A security analyst receives a suspicious domain:
@@ -992,6 +884,8 @@ Step 7 — Response
 
 The analyst can use the information to support the organization's existing security-response process.
 
+---
+
 ## 🧑‍💻 Development
 
 The project is organized so that individual components can be developed and tested independently.
@@ -1011,6 +905,8 @@ API
 Frontend
 
 This structure makes it easier to extend the platform without tightly coupling every component.
+
+---
 
 ## 📌 Project Status
 
@@ -1039,6 +935,8 @@ Current implemented areas include:
  Incident management workflow
  Authentication and role-based access control
  Production deployment configuration
+
+ ---
  
 ## 🛠️ Troubleshooting
 Flask does not start
@@ -1056,7 +954,9 @@ Start the application:
 python -m backend.app
 Database is empty
 
-Run the seed scripts:
+---
+
+## Run the seed scripts:
 
 python data\seed_threats.py
 python data\seed_vulnerabilities.py
@@ -1075,6 +975,8 @@ Then use:
 python -m backend.app
 
 For seed scripts, ensure the project root is available on Python's module path.
+
+---
 
 ## 🤝 Contributing
 
@@ -1102,11 +1004,15 @@ pytest
 
 should complete successfully.
 
+---
+
 ## 📜 License
 
 This project is intended as a cybersecurity education and portfolio project.
 
 A specific open-source license can be added before public distribution.
+
+---
 
 ## 👨‍💻 Author
 
